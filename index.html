@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Developer Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+
+    <main class="app">
+
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Developer Intelligence Platform</p>
+                <h1>GitHub Analytics Dashboard</h1>
+                <p class="subtitle">
+                    Search any GitHub profile and get developer stats, repositories,
+                    achievements, language analytics, scorecard and comparison.
+                </p>
+            </div>
+
+            <div class="hero-actions">
+                <button id="themeBtn" class="ghost-btn">🌙 Dark</button>
+            </div>
+        </header>
+
+        <section class="search-panel glass">
+            <div class="search-main">
+                <input
+                    id="usernameInput"
+                    type="text"
+                    placeholder="Enter GitHub username or profile URL"
+                />
+                <button id="searchBtn">Analyze</button>
+            </div>
+
+            <div class="compare-main">
+                <input
+                    id="compareInput"
+                    type="text"
+                    placeholder="Optional: compare with another username"
+                />
+                <button id="compareBtn">Compare</button>
+            </div>
+        </section>
+
+        <section id="historySection" class="history"></section>
+
+        <section id="messageBox"></section>
+
+        <section id="profileSection"></section>
+
+        <section id="quickStatsSection"></section>
+
+        <section id="insightSection"></section>
+
+        <section id="scorecardSection"></section>
+
+        <section id="languageSection"></section>
+
+        <section id="achievementSection"></section>
+
+        <section id="favoriteRepoSection"></section>
+
+        <section id="controlsSection" class="controls glass hidden">
+            <input id="repoSearchInput" type="text" placeholder="Search repository..." />
+
+            <select id="languageFilter">
+                <option value="all">All Languages</option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="updated">Recently Updated</option>
+                <option value="stars">Most Stars</option>
+                <option value="forks">Most Forks</option>
+                <option value="issues">Most Issues</option>
+                <option value="size">Largest Size</option>
+                <option value="name">Name A-Z</option>
+            </select>
+        </section>
+
+        <section id="topReposSection"></section>
+
+        <section id="reposSection"></section>
+
+        <section id="compareSection"></section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
